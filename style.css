@@ -1,0 +1,36 @@
+/* Smooth transitions */
+body, header, main, aside, section, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fade transition for content */
+#content-box {
+  transition: opacity 0.3s ease;
+}
+
+/* Lesson buttons */
+.lesson-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lesson-btn:hover {
+  background-color: #e0e7ff; /* light blue */
+  transform: translateX(4px);
+}
+
+.dark .lesson-btn:hover {
+  background-color: #374151; /* dark hover */
+}
+
+/* Toggle animation */
+#theme-toggle {
+  transition: transform 0.3s ease;
+}
+#theme-toggle:hover {
+  transform: rotate(25deg);
+}

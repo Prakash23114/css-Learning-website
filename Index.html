@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-[#ebebeb] font-sans transition-colors duration-300">
+    <!-- HEADER -->
+    <header
+      class="flex justify-between items-center bg-white shadow-md px-6 py-3 border-b-4 border-[#264de4] transition-colors duration-300 dark:bg-gray-800 dark:border-[#1c3faa]"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+          alt="CSS Logo"
+          class="w-10 h-10"
+        />
+        <h1
+          class="text-2xl font-bold text-[#264de4] tracking-wide dark:text-white"
+        >
+          CSS Tutorial
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button
+          class="bg-[#f5a623] text-white px-3 py-1 rounded-full hover:bg-[#e5951a] transition"
+        >
+          ← Back
+        </button>
+        <button
+          id="theme-toggle"
+          class="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition text-xl"
+        >
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main
+      class="flex flex-col lg:flex-row gap-6 p-6 transition-colors duration-300 dark:bg-gray-900"
+    >
+      <!-- SIDEBAR -->
+      <aside
+        class="bg-white w-full lg:w-1/4 p-5 rounded-xl shadow-md border border-gray-200 transition-colors duration-300 dark:bg-gray-800 dark:border-gray-700"
+      >
+        <h2
+          class="text-lg font-bold text-[#264de4] mb-3 border-l-4 border-[#2965f1] pl-2 dark:text-white"
+        >
+          📘 Introduction to CSS
+        </h2>
+        <ul class="space-y-2 text-gray-700 font-medium mb-6 dark:text-gray-300">
+          <li><button class="lesson-btn" data-target="what">What is CSS?</button></li>
+          <li><button class="lesson-btn" data-target="why">Why do we need CSS?</button></li>
+          <li><button class="lesson-btn" data-target="how">How to Add CSS</button></li>
+          <li><button class="lesson-btn" data-target="selectors">CSS Selectors</button></li>
+          <li><button class="lesson-btn" data-target="intro-projects">💻 Projects</button></li>
+          <li><button class="lesson-btn" data-target="intro-quiz">🧠 Quiz</button></li>
+        </ul>
+
+        <h2
+          class="text-lg font-bold text-[#264de4] mb-3 border-l-4 border-[#2965f1] pl-2 dark:text-white"
+        >
+          📗 CSS Properties
+        </h2>
+        <ul class="space-y-2 text-gray-700 font-medium dark:text-gray-300">
+          <li><button class="lesson-btn" data-target="colors">Colors</button></li>
+          <li><button class="lesson-btn" data-target="properties">Font Properties</button></li>
+          <li><button class="lesson-btn" data-target="borders">Borders</button></li>
+          <li><button class="lesson-btn" data-target="spacing">Margins & Padding</button></li>
+          <li><button class="lesson-btn" data-target="inspection">CSS Inspection</button></li>
+          <li><button class="lesson-btn" data-target="prop-projects">💻 Projects</button></li>
+          <li><button class="lesson-btn" data-target="prop-quiz">🧠 Quiz</button></li>
+        </ul>
+
+        <h2
+          class="text-lg font-bold text-[#264de4] mb-3 border-l-4 border-[#2965f1] pl-2 dark:text-white"
+        >
+          📕 CSS Intermediate
+        </h2>
+        <ul class="space-y-2 text-gray-700 font-medium dark:text-gray-300">
+          <li><button class="lesson-btn" data-target="cascade">Cascade - Specificty and Inheritance</button></li>
+          <li><button class="lesson-btn" data-target="select">Selectors</button></li>
+          <li><button class="lesson-btn" data-target="position">Position</button></li>
+          <li><button class="lesson-btn" data-target="int-projects">💻 Projects</button></li>
+          <li><button class="lesson-btn" data-target="int-quiz">🧠 Quiz</button></li>
+        </ul>
+      </aside>
+
+      <!-- CONTENT BOX -->
+      <section class="flex-1 space-y-5">
+        <div
+          id="content-box"
+          class="bg-white p-6 rounded-xl shadow-md border border-gray-200 min-h-[300px] transition-all duration-300 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="border-l-4 border-[#2965f1] pl-4 mb-4">
+            <h2
+              id="content-title"
+              class="text-2xl font-bold text-[#264de4] mb-1 dark:text-white"
+            >
+              Welcome to CSS
+            </h2>
+            <p
+              id="content-subtitle"
+              class="text-sm text-gray-500 italic dark:text-gray-400"
+            >
+              Learn the basics of styling the web.
+            </p>
+          </div>
+          <p id="content-text" class="text-gray-700 leading-relaxed dark:text-gray-300">
+            Click a lesson from the sidebar to begin your CSS learning journey.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-4 rounded-xl shadow-md border border-gray-200 transition-colors duration-300 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <h3
+            class="font-semibold text-[#264de4] mb-2 border-l-4 border-[#2965f1] pl-2 dark:text-white"
+          >
+            Try it Yourself
+          </h3>
+
+          <textarea
+            id="code-editor"
+            placeholder="Write HTML/CSS here..."
+            class="w-full h-32 bg-gray-100 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2965f1] dark:bg-gray-700 dark:text-white dark:border-gray-600"
+          ></textarea>
+
+          <button
+            id="run-btn"
+            class="mt-2 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition"
+          >
+            ▶ Run
+          </button>
+
+          <!-- Output area -->
+          <iframe
+            id="output-frame"
+            class="w-full h-60 mt-4 border border-gray-300 rounded-md bg-white"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
